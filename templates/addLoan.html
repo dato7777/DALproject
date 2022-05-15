@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}  
+{% block content %}
+  <h1>Enter a date of Loan</h1>
+<form action="", method="POST">
+  Loan Date: <input type="date" name="LoanDate">
+  <input type="submit">
+</form>
+{% endblock %}

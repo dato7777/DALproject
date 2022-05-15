@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}  
+{% block content %}
+  <h1>Add new Book</h1>
+<form action="", method="POST">
+  Name: <input type="text" name="bookName">
+  Author: <input type="text" name="Author">
+  Published: <input type="number" name="Published">
+  Type: <input type="number" name="Type">
+  <input type="submit">
+</form>
+{% endblock %}

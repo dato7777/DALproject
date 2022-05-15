@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}  
+{% block content %}
+
+  <h1>Details of customer: {{customer[1]}}</h1>
+  
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{customer[1]}}</h5>
+      <p class="card-text">ID: {{customer[0]}}</p>
+      <p class="card-text">Name: {{customer[1]}}</p>
+      <p class="card-text">City: {{customer[2]}}</p>
+      <p class="card-text">Age: {{customer[3]}}</p>
+      <a href="/customers/single/{{customer[0]}}/upd"  class="btn btn-primary">Update Customer</a>
+    </div>
+  </div>
+  
+{% endblock %}

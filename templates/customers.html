@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}  
+{% block content %}
+  <h1>Customers</h1>
+<h1>{{context.msg}}</h1><br>
+  {% for n in context.customers %}
+  <a href="/customers/single/{{n[0]}}" >{{n[1]}}</a> &nbsp;&nbsp;
+  <a href="/books/all/{{n[0]}}" >Loan</a>&nbsp;&nbsp;
+  <a href="/customers/del/{{n[0]}}" >Delete</a>&nbsp;&nbsp;<br><br>
+  <!-- <a href="{{n[1]}}" >Update</a><br> -->
+{% endfor %}<br>
+<strong><a href="/customers/add" class="button">Add New</a></strong>
+
+  <p class="important">
+    Welcome to my awesome homepage.
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}  
+{% block content %}
+  <h1>Loans</h1>
+  {% for n in loanList %}
+  Loan ID: {{n[0]}}
+  Customer ID: {{n[1]}}
+  Book ID: {{n[2]}}
+  Loan Date ID: {{n[3]}}
+  Return Date: {{n[4]}}
+  {% endfor %}
+{% endblock %}
