@@ -1,18 +1,29 @@
 {% extends "layout.html" %}
 {% block title %}Index{% endblock %}
 {% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
-{% endblock %}  
+{{ super() }}
+<style type="text/css">
+  .important {
+    color: #336699;
+  }
+</style>
+{% endblock %}
 {% block content %}
-  <h1>Loans</h1>
-  {% for n in loanList %}
-  Loan ID: {{n[0]}}
-  Customer ID: {{n[1]}}
-  Book ID: {{n[2]}}
-  Loan Date ID: {{n[3]}}
-  Return Date: {{n[4]}}
-  {% endfor %}
+<h1>Loans</h1>
+{% for n in loanlist %}
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+
+    <p class="card-text">Loan ID: {{n[0]}}</p>
+    <p class="card-text">Customer: {{n[1]}}</p>
+    <p class="card-text">Book: {{n[2]}}</p>
+    <p class="card-text">Book Type: {{n[3]}}</p>
+    <p class="card-text">Loan Date: {{n[4]}}</p>
+    <p class="card-text">Return Date: {{n[5]}}</p>
+    <a href="/loans/{{n[0]}}/all/returnLoan" class="button">Return Book</a>
+    <a href="/loans/{{n[0]}}/all/status" class="button2">Status</a><br>&nbsp;&nbsp;
+  </div>
+</div>
+{% endfor %}
 {% endblock %}

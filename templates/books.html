@@ -12,7 +12,7 @@
 
   {% for n in context.books %}
   <a href="/books/single/{{n[0]}}" >{{n[1]}}</a> &nbsp;&nbsp;
-  <a href="/books/all/{{context.id}}/{{n[0]}}/addLoan" >Loan</a>&nbsp;&nbsp;
+  <a href="/loans/{{context.id}}/{{n[0]}}/addLoan" >Loan</a>&nbsp;&nbsp;
   <a href="/books/del/{{n[0]}}" >Delete</a>&nbsp;&nbsp;<br><br>
   <!-- <a href="{{n[1]}}" >Update</a><br> -->
   {% endfor %}

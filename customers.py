@@ -1,4 +1,4 @@
-from crypt import methods
+
 from flask import Flask, Blueprint, render_template, request
 
 from DAL import execute_sql, upd_sql,execute_sql_oneResult

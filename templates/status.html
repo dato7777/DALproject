@@ -7,9 +7,9 @@
   </style>
 {% endblock %}  
 {% block content %}
-  <h1>Enter a date of Loan</h1>
-<form action="", method="POST">
-  Loan Date: <input type="date" name="LoanDate" required>
-  <input type="submit">
-</form>
+  <h1>Status of the Loan</h1>
+  <h2>Book Status:</h2> <h2 style="color: rgb(20, 50, 220);">{{msg}}</h2>
+  <h2>Late by:</h2> <h2 style="color: rgb(220, 20, 20);">{{overDays}} {{msg2}} days</h2>
+   <h2></h2>
+   
 {% endblock %}

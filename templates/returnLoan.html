@@ -7,11 +7,10 @@
   </style>
 {% endblock %}  
 {% block content %}
-  <h1>Add new Customer</h1>
+  <h1>Enter a date of Return</h1>
 <form action="", method="POST">
-  Name: <input type="text" name="customerName" required>
-  City: <input type="text" name="City" required>
-  Age:  <input type="number" name="Age" required>
+  <h2 style="color: crimson;">{{msg}}</h2><br>
+  Loan Date: <input type="date" name="ReturnDate">
   <input type="submit">
 </form>
 {% endblock %}

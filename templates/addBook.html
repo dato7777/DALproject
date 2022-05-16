@@ -9,10 +9,15 @@
 {% block content %}
   <h1>Add new Book</h1>
 <form action="", method="POST">
-  Name: <input type="text" name="bookName">
-  Author: <input type="text" name="Author">
-  Published: <input type="number" name="Published">
-  Type: <input type="number" name="Type">
+  Name: <input type="text" name="bookName" required>
+  Author: <input type="text" name="Author" required>
+  Published: <input type="number" name="Published" required>
+  <label for="Type"><br>Choose Type: <br>1 – up to 10 days <br> 2 – up to 5 days <br> 3 – up to 2 days</label>
+  <select name="Type" id="cars" required>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
   <input type="submit">
 </form>
 {% endblock %}
